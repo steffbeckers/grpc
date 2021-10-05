@@ -1,0 +1,39 @@
+﻿@page "/greeter"
+
+<PageTitle>Greeter</PageTitle>
+
+@using gRPC.Client.Blazor.Data
+@using gRPC.Client.Blazor.Models
+@using gRPC.Greeter
+@inject GreeterService greeterService
+
+<h1>Greeter</h1>
+
+<p>This component demonstrates a gRPC call.</p>
+
+<EditForm Model="@input" OnValidSubmit="@HandleValidSubmit">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <InputText class="form-control" id="name" @bind-Value="input.Name" placeholder="Steff" />
+    </div>
+
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <button class="btn btn-primary mt-2" type="submit">Submit</button>
+</EditForm>
+
+@if (reply != null)
+{
+    <p class="mt-2">@reply.Message</p>
+}
+
+@code {
+    private GreeterInput input = new GreeterInput();
+    private HelloReply reply;
+
+    private async Task HandleValidSubmit()
+    {
+        this.reply = await greeterService.SayHelloAsync(this.input.Name);
+    }
+}
