@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gRPC.Server", "gRPC.Server\gRPC.Server.csproj", "{FDCB0D49-6780-49EF-9ABB-798015F53CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.Client.Blazor", "gRPC.Client.Blazor\gRPC.Client.Blazor.csproj", "{332B205E-D06F-4406-99D4-E8AEA9B90053}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FDCB0D49-6780-49EF-9ABB-798015F53CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDCB0D49-6780-49EF-9ABB-798015F53CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDCB0D49-6780-49EF-9ABB-798015F53CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332B205E-D06F-4406-99D4-E8AEA9B90053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332B205E-D06F-4406-99D4-E8AEA9B90053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332B205E-D06F-4406-99D4-E8AEA9B90053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332B205E-D06F-4406-99D4-E8AEA9B90053}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
