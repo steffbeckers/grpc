@@ -1,2 +1,2 @@
-# grpc
+# gRPC
 gRPC test project.
